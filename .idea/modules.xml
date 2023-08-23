@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/conditionals and loops.iml" filepath="$PROJECT_DIR$/conditionals and loops.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/javafromthescratch.iml" filepath="$PROJECT_DIR$/javafromthescratch.iml" />
+>>>>>>> b69a20759c1f0a98d3831e2fd41e14cac7db303a
     </modules>
   </component>
 </project>
