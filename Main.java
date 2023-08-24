@@ -1,37 +1,70 @@
+import java.util.Arrays;
 
 public class Main {
+
     public static void main(String[] args) {
-        // Q: store a roll number
-        int a = 19;
+        int[] arr = {5, 3, 4, 1, 2};
+        insertion(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
-        // Q: store a person's name
-        String name = "Kunal Kushwaha";
-
-        // Q: store 5 roll numbers
-        int rno1 = 23;
-        int rno2 = 55;
-        int rno3 = 18;
-
-        // syntax
-        // datatype[] variable_name = new datatype[size];
-        // store 5 roll numbers:
-//        int[] rnos = new int[5];
-//        // or directly
-//        int[] rnos2 = {23, 12, 45, 32, 15};
-
-        int[] ros; // declaration of array. ros is getting defined in the stack
-        ros = new int[5]; // initialisation: actually here object is being created in the memory (heap)
-
-//        System.out.println(ros[1]);
-        for (int element : ros) {
-            System.out.println(element);
+    static void insertion(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    swap(arr, j, j - 1);
+                } else {
+                    break;
+                }
+            }
         }
+    }
 
-        String[] arr = new String[4];
-//        System.out.println(arr[0]);
+    static void selection(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            // find the max item in the remaining array and swap with correct index
+            int last = arr.length - i - 1;
+            int maxIndex = getMaxIndex(arr, 0, last);
+            swap(arr, maxIndex, last);
+        }
+    }
 
-        for (String element : arr) {
-            System.out.println(element);
+    static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
+
+    static int getMaxIndex(int[] arr, int start, int end) {
+        int max = start;
+        for (int i = start; i <= end; i++) {
+            if (arr[max] < arr[i]) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    static void bubble(int[] arr) {
+        boolean swapped;
+        // run the steps n-1 times
+        for (int i = 0; i < arr.length; i++) {
+            swapped = false;
+            // for each step, max item will come at the last respective index
+            for (int j = 1; j < arr.length - i; j++) {
+                // swap if the item is smaller than the previous item
+                if (arr[j] < arr[j - 1]) {
+                    // swap
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                    swapped = true;
+                }
+            }
+            // if you did not swap for a particular value of i, it means the array is sorted hence stop the program
+            if (!swapped) { // !false = true
+                break;
+            }
         }
     }
 }
