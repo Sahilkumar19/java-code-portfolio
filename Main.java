@@ -2,16 +2,45 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        int arr[] = {98,87,76,65,54,43,32,21};
+        int key = 43;
+        int ans = BinarySearch2(arr,key);
+        System.out.println(ans);
     }
+    // binary search technique for array in ascending order
+    static int BinarySearch(int arr[] , int key) {
+        int s = 0;
+        int e = arr.length-1;
+        while (s <= e) {
+            int mid = s +(e - s)/2;
+            if (arr[mid] > key) {
+                e = mid - 1;
+            } else if (arr[mid] < key) {
+                s = mid + 1;
+
+            }else {
+                return mid;
+            }
+        }
+        return -1;
+
+    }
+    // binary search technique for array in descending order
+    static int BinarySearch2(int arr[] , int key) {
+        int s = 0;
+        int e = arr.length-1;
+        while (s < e) {
+            int mid = s + (e - s)/2;
+            if (arr[mid] > key) {
+                s = mid +1;
+            } else if (arr[mid] < key) {
+                e = mid -1;
+            }else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
+
 }
