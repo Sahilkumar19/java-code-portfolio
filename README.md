@@ -1,5 +1,5 @@
 # java-code-portfolio
-Welcome to my Java Code Portfolio. This repository serves as a showcase of my Java programming journey.
+Welcome to my Java Code Portfolio.
 
 
 ## Introduction
