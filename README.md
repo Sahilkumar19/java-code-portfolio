@@ -9,7 +9,7 @@ Feel free to explore each program's directory for more details and the source co
 
 ## Contributing
 
-If you'd like to contribute to this repository, I welcome your contributions! Fell free to open new issues. You can contribute by adding new programs, improving existing code, fixing bugs, or adding documentation. Here's how to contribute:
+If you'd like to contribute to this repository, I welcome your contributions. Feel free to open new issues. You can contribute by adding new programs, improving existing code, fixing bugs, or adding documentation. Here's how to contribute:
 
 1. Fork the repository to your GitHub account.
 2. Create a new branch for your changes.
