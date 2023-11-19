@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Attendance & Leave Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to Scheduling Portal</h1>
+        <p>Contact Admin: admin.reck</p>
+        <form id="loginForm">
+            <input type="text" id="Userid" placeholder="SchoolID">
+            <input type="password" id="password" placeholder="Password">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>For queries, please contact the admin.</p>
+    </div>
+
+    <div class="attendance-container" style="display: none;">
+        <h2>Mark Attendance</h2>
+        <button onclick="markAttendance()">Mark Attendance</button>
+    </div>
+
+    <div class="leave-container" style="display: none;">
+        <h2>Request Leave</h2>
+        <form id="leaveForm">
+            <input type="text" id="reason" placeholder="Reason for Leave">
+            <input type="date" id="leaveDate">
+            <button type="button" onclick="requestLeave()">Request Leave</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
