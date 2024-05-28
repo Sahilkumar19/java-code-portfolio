@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <label for="colorPicker">Color:</label>
+            <input type="color" id="colorPicker" value="#000000">
+            <label for="thickness">Thickness:</label>
+            <input type="range" id="thickness" min="1" max="10" value="2">
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
+        </div>
+        <canvas id="drawingCanvas" width="800" height="500"></canvas>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat</h2>
+        </div>
+        <div class="messages" id="messages"></div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "collaborative-drawing-app",
+    "version": "1.0.0",
+    "description": "A real-time collaborative drawing app",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "ws": "^8.2.2"
+    },
+    "author": "Your Name",
+    "license": "MIT"
+  }
+  
