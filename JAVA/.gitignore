@@ -1,0 +1,14 @@
+# IDE folders & installations
+.idea/
+*.iml
+IntelliJ IDEA Community Edition*/
+out/
+bin/
+build/
+target/
+
+# Large datasets & binaries
+*.json
+*.jar
+*.dll
+*.exe

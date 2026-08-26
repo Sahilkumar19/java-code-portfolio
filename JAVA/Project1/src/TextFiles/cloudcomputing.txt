@@ -1,0 +1,5 @@
+Cloud Computing Overview
+
+Cloud computing is a paradigm that provides on-demand access to computing resources over the internet. It includes various service models like Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). IaaS offers virtualized computing resources, while PaaS provides a platform for developers to build, deploy, and manage applications. SaaS delivers software applications over the internet, eliminating the need for local installations.
+
+Cloud computing also involves deployment models, such as public, private, and hybrid clouds. Public clouds are owned by third-party providers and open for public use, while private clouds are dedicated to a single organization. Hybrid clouds combine elements of both public and private clouds, offering flexibility and scalability.

@@ -1,0 +1,5 @@
+Software Development Methodologies
+
+Software development methodologies are crucial frameworks that guide the process of creating and maintaining an information system. One popular methodology is the Agile approach, emphasizing iterative development, collaboration, and customer feedback. Agile practices involve breaking a project into small increments, allowing for flexibility and adaptability. Scrum, a specific Agile framework, employs short development cycles called sprints, enabling quick responses to changing requirements.
+
+Another widely used methodology is the Waterfall model, characterized by a linear and sequential approach. In Waterfall, each phase must be completed before moving to the next, making it less flexible than Agile. Both methodologies have their advantages and drawbacks, and the choice often depends on the project's nature and requirements.
