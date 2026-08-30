@@ -741,14 +741,14 @@ class NumMatrix {
     void prefixSumCol(){
         for (int c = 0; c < m; c++) {
             for (int r = 1; r < n; r++) {
-                precomputed[c][r]+=precomputed[r-1][c];
+                precomputed[r][c]+=precomputed[r-1][c];
             }
         }
     }
 
     public NumMatrix(int[][] matrix) {
-        int n=matrix.length;
-        int m=matrix[0].length;
+        this.n=matrix.length;
+        this.m=matrix[0].length;
         precomputed=new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -762,7 +762,7 @@ class NumMatrix {
     public int sumRegion(int row1, int col1, int row2, int col2) {
         int ans = precomputed[row2][col2];
         if (row1-1>=0){
-            ans-=precomputed[row2-1][col2];
+            ans-=precomputed[row1-1][col2];
         }if (col1-1>=0){
             ans-=precomputed[row2][col1-1];
         }if (row1-1>=0 && col1-1>=0){
