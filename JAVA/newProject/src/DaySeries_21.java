@@ -723,6 +723,10 @@ public class DaySeries_21 {
 
 //    ------------------------------------------------------ PRE-COMPUTATION -------------------------------------------------------------------------------------
 //     in 2d
+// given that we have performed the precomputation in 2d array/matrix so we can answer the queries of sum of submatrix in O(1)/constant time.
+// formula: m[i2][j2] - m[i1-1][j2] - m[i2][j1-1] + m[i1-1][j1-1] 
+// where where i1,i2,j1 and j2 are row1, row2, col1 and col2 in the below implementation. And the last part that is added because that sub matrix 
+// got subtracted twice in the process.
 class NumMatrix {
     int[][] precomputed;
     int n;
