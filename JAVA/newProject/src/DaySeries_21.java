@@ -323,7 +323,7 @@ public class DaySeries_21 {
         int e=n;
         while (s<=e){
             int mid=s+(e-s)/2;
-            if (mid*mid==n){
+            if (mid*mid==n){                       //for large n(mid) this will not work as it will give integer overflow. so use long in that case then cast to int.
                 return true;
             } else if (mid*mid>n) {
                 e=mid-1;
