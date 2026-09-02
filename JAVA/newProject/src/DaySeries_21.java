@@ -352,6 +352,30 @@ public class DaySeries_21 {
 //    and we know one thing for sure is that if numbers is a perfect square then it has odd numbers of factors
 //    in that case if a door is toggeled odd numbers of times then it will be opened at the end (given that initially doors were closed)
 
+// ~ above solution is not otimized as it does not passes all the test cases of a very similar problem in leetcode. it gives tle. As the time
+//  complexity of the above solution is n.lg n coz we are running loop n times and to check that number is perfect square or not.
+//  so the idea is to instead of asking is 1 a perfect square? is 2 a perfect square? ... is 99999 a perfect square?, we ask:
+//  what is the largest integer k such that k^2<=n. this single integer k is directly the count of all perfect squares from 1 to n which we can easily
+//  find using pure binary search algo. so the modified solution is:
+
+    public static int openDoors(int n){
+        long s=0;
+        long e=n;
+        int ans=0;
+        while(s<=e){
+            long mid=s+(e-s)/2;
+            if(mid*mid<=n){
+                ans=(int) mid;
+                s=mid+1;
+            }else{
+                e=mid-1;
+            }
+        }
+        return ans;
+    }
+
+
+    
 //    primality test
 
 //    1.prime number
